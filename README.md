@@ -42,7 +42,7 @@ $main-logo: "../../assets/logo.png";
 ```
 
 ##Grids, Type and Measurements
-I have not yet started on the Grid system, however we have the following defined so far.
+I have not yet started on the Grid system, however we have the following variables defined so far.
 ```
 $gutter: 10px; /*Base unit for pixel-gutters*/
 $bodyfont: 'Source Sans Pro', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; /*Font family setting for the default body*/
@@ -53,4 +53,15 @@ $heading-height-ratio: 1.6; /*Line height proportion - headings*/
 
 $base-type-size: 16; /* base font size */
 $baseline: (($base-type-size/10) * $line-height-ratio);
+```
+To automatically compute for line-heights and margins, refer to the following mixins defined so far:
+```
+/*Defines font size, margin and line height*/
+@include font-size([estimated size in pixels], [block, heading or quote])
+
+/*Define all header font sizes, margins and line heights within the element scope*/
+@include header-sizes([base size: estimated size in pixels]);
+
+/*Define all paragraph and quote block text sizes, margins and line heights within the element scope*/
+@include header-sizes([base size: estimated size in pixels]);
 ```
