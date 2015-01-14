@@ -65,3 +65,26 @@ To automatically compute for line-heights and margins, refer to the following mi
 /*Define all paragraph and quote block text sizes, margins and line heights within the element scope*/
 @include header-sizes([base size: estimated size in pixels]);
 ```
+##Color
+This is pretty straightforward. The variables set here are the colors to be used for the rest of the site:
+```
+$blue-widget-background: #0f1118;
+$blue-body-background: #151922;
+$blue-dark-accent: #0d202c;
+$blue-accent: #0574a0;
+
+$widget-dark-side: #0d2736;
+$widget-light-side: #094b68;
+
+$white: "#ffffff";
+$gray-superlight: "#e6e8ea";
+```
+
+#Notes:
+This is all still a work in progress. I will still build the following:
+- Image Style declarations
+- Embedded Video style declarations
+- Icon Style Declarations
+- Iconfonts and SVG management
+- jQuery and widget arrangement
+- and many many more...
