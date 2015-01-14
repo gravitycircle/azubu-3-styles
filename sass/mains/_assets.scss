@@ -1,0 +1,181 @@
+/* Breakpoints */
+
+$mobile: "screen and (max-width: 480px)";
+$tablet-portrait: "screen and (min-width: 481px)";
+$tablet-landscape: "screen and (min-width: 799px)";
+$desktop-small: "screen and (min-width: 1024px)";
+$desktop-standard: "screen and (min-width: 1200px)";
+$desktop-uhd: "screen and (min-width: 1921px)";
+/* Specifics */
+$tablet-portrait-specific: "screen and (min-width: 481px) and (max-width: 768px)";
+$tablet-landscape-specific: "screen and (min-width: 799px) and (max-width: 1023px)";
+$desktop-small-specific: "screen and (min-width: 1024px) and (max-width: 1199px)";
+$desktop-standard-specific: "screen and (min-width: 1200px) and (max-width: 1920px)";
+
+/*asset library*/
+$main-asset-directory: "../../assets/";
+$main-logo: "../../assets/logo.png";
+
+/*Grids, measurements, etc...*/
+$gutter: 10px;
+$bodyfont: 'Source Sans Pro', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+/*colors*/
+$blue-widget-background: #0f1118;
+$blue-body-background: #151922;
+$blue-dark-accent: #0d202c;
+$blue-accent: #0574a0;
+
+$widget-dark-side: #0d2736;
+$widget-light-side: #094b68;
+
+$white: "#ffffff";
+$gray-superlight: "#e6e8ea";
+
+$line-height-ratio: 1.4;
+$quote-height-ratio: 1.5;
+$heading-height-ratio: 1.6;
+$base-type-size: 16;
+$baseline: (($base-type-size/10) * $line-height-ratio);
+/* Style Functions */
+@function type-proportions($type)
+{
+	@if $type == 'block'{
+		@return $line-height-ratio;
+	}
+	@else if $type == 'quote'{
+		@return $quote-height-ratio;
+	}
+	@else
+	{
+		@return $heading-height-ratio;
+	}
+}
+
+/* Standard Mixins */
+@mixin widget-containers(){
+	@include box-sizing(border-box);
+	padding: $gutter * 2;
+	display: inline-block;
+	
+	&.large{
+		width: 100%;
+	}
+	
+	&.standard{
+		@media #{$mobile}{
+			width: 100%;
+		}
+		@media #{$tablet-portrait-specific}{
+			width: 100%;
+		}
+		@media #{$tablet-landscape-specific}{
+			width: 50%;
+		}
+		@media #{$desktop-small-specific}{
+			width: 25%;
+		}
+		@media #{$desktop-standard}{
+			width: 20%;
+		}
+	}
+}
+
+@mixin widget-styles(){
+	border-left: 2px solid $widget-dark-side;
+	border-top: 2px solid $widget-light-side;
+	border-right: 2px solid $widget-dark-side;
+	border-bottom: 2px solid $widget-dark-side;
+	padding: 5px;
+	background-color: $blue-widget-background;
+	position: relative;
+	@include box-sizing(border-box);
+	
+	.content{
+		@include box-sizing(border-box);
+		padding: $baseline+rem;
+		
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}
+
+@mixin widget-hover(){
+	border-color: $blue-accent;
+}
+
+@mixin font-size($sizeinpixels, $type: "block"){	
+	font-size: ($sizeinpixels/10)+rem;
+	line-height: (($sizeinpixels / 10) * type-proportions($type))+rem;
+	
+	@if $type == 'heading'{
+		font-weight: 600;
+		margin-bottom: ($base-type-size/10) * $line-height-ratio+rem;
+	}
+	@else if $type == 'quote'{
+		font-style: italic;
+		display: block;
+		&:before{
+			content: '"';
+		}
+		
+		&:after{
+			content: '"';
+		}
+		margin-bottom: ($base-type-size/10) * $line-height-ratio+rem;
+	}
+	@else if $type == 'block'{
+		margin-bottom: ($base-type-size/10) * $line-height-ratio+rem;
+	}
+}
+
+@mixin header-sizes($base){
+	h1{
+		@include font-size(($base * 3), heading);
+		&.upper-case{
+			text-transform: uppercase;
+		}
+	}
+	h2{
+		@include font-size(($base * 2.5), heading);
+		&.upper-case{
+			text-transform: uppercase;
+		}
+	}
+	h3{
+		@include font-size(($base * 2), heading);
+		&.upper-case{
+			text-transform: uppercase;
+		}
+	}
+	h4{
+		@include font-size(($base * 1.5), heading);
+		&.upper-case{
+			text-transform: uppercase;
+		}
+	}
+	h5{
+		@include font-size(($base * 1.25), heading);
+		&.upper-case{
+			text-transform: uppercase;
+		}
+	}
+	h6{
+		@include font-size(($base * 1), heading);
+		&.upper-case{
+			text-transform: uppercase;
+		}
+	}
+}
+
+@mixin paragraph-sizes($base){
+	p{
+		@include font-size($base * 1, block);
+	}
+	
+	blockquote{
+		@include font-size($base * 0.90, quote);
+	}
+}

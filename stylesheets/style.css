@@ -1,0 +1,303 @@
+/* line 6, ../sass/mains/_reset.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 16, ../sass/mains/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 19, ../sass/mains/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../sass/mains/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 25, ../sass/mains/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 29, ../sass/mains/_reset.scss */
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 35, ../sass/mains/_reset.scss */
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* line 40, ../sass/mains/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Breakpoints */
+/* Specifics */
+/*asset library*/
+/*Grids, measurements, etc...*/
+/*colors*/
+/* Style Functions */
+/* Standard Mixins */
+/* line 1, ../sass/mains/_azubu-reset.scss */
+html {
+  min-height: 100%;
+  font-size: 62.5%;
+}
+
+/* line 5, ../sass/mains/_azubu-reset.scss */
+body {
+  background-image: url("../../assets/background.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  color: #fff;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 2.56rem;
+}
+
+/* Type */
+/* line 18, ../sass/mains/_azubu-reset.scss */
+.widget {
+  max-width: 100%;
+}
+/* line 135, ../sass/mains/_assets.scss */
+.widget h1 {
+  font-size: 4.8rem;
+  line-height: 7.68rem;
+  font-weight: 600;
+  margin-bottom: 2.24rem;
+}
+/* line 137, ../sass/mains/_assets.scss */
+.widget h1.upper-case {
+  text-transform: uppercase;
+}
+/* line 141, ../sass/mains/_assets.scss */
+.widget h2 {
+  font-size: 4rem;
+  line-height: 6.4rem;
+  font-weight: 600;
+  margin-bottom: 2.24rem;
+}
+/* line 143, ../sass/mains/_assets.scss */
+.widget h2.upper-case {
+  text-transform: uppercase;
+}
+/* line 147, ../sass/mains/_assets.scss */
+.widget h3 {
+  font-size: 3.2rem;
+  line-height: 5.12rem;
+  font-weight: 600;
+  margin-bottom: 2.24rem;
+}
+/* line 149, ../sass/mains/_assets.scss */
+.widget h3.upper-case {
+  text-transform: uppercase;
+}
+/* line 153, ../sass/mains/_assets.scss */
+.widget h4 {
+  font-size: 2.4rem;
+  line-height: 3.84rem;
+  font-weight: 600;
+  margin-bottom: 2.24rem;
+}
+/* line 155, ../sass/mains/_assets.scss */
+.widget h4.upper-case {
+  text-transform: uppercase;
+}
+/* line 159, ../sass/mains/_assets.scss */
+.widget h5 {
+  font-size: 2rem;
+  line-height: 3.2rem;
+  font-weight: 600;
+  margin-bottom: 2.24rem;
+}
+/* line 161, ../sass/mains/_assets.scss */
+.widget h5.upper-case {
+  text-transform: uppercase;
+}
+/* line 165, ../sass/mains/_assets.scss */
+.widget h6 {
+  font-size: 1.6rem;
+  line-height: 2.56rem;
+  font-weight: 600;
+  margin-bottom: 2.24rem;
+}
+/* line 167, ../sass/mains/_assets.scss */
+.widget h6.upper-case {
+  text-transform: uppercase;
+}
+/* line 174, ../sass/mains/_assets.scss */
+.widget p {
+  font-size: 1.6rem;
+  line-height: 2.24rem;
+  margin-bottom: 2.24rem;
+}
+/* line 178, ../sass/mains/_assets.scss */
+.widget blockquote {
+  font-size: 1.44rem;
+  line-height: 2.16rem;
+  font-style: italic;
+  display: block;
+  margin-bottom: 2.24rem;
+}
+/* line 120, ../sass/mains/_assets.scss */
+.widget blockquote:before {
+  content: '"';
+}
+/* line 124, ../sass/mains/_assets.scss */
+.widget blockquote:after {
+  content: '"';
+}
+
+/* line 1, ../sass/mains/_grid-and-layout.scss */
+header {
+  height: 100px;
+  padding: 30px 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 481px) {
+  /* line 1, ../sass/mains/_grid-and-layout.scss */
+  header {
+    padding: 30px 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* line 1, ../sass/mains/_grid-and-layout.scss */
+  header {
+    padding: 30px 20px;
+  }
+}
+@media screen and (min-width: 1921px) {
+  /* line 1, ../sass/mains/_grid-and-layout.scss */
+  header {
+    padding: 30px 40px;
+  }
+}
+/* line 17, ../sass/mains/_grid-and-layout.scss */
+header h1 {
+  width: 220px;
+  height: 40px;
+  display: block;
+  background-image: url("../../assets/logo.png");
+  background-size: cover;
+  background-position: left center;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+/* line 31, ../sass/mains/_grid-and-layout.scss */
+.container {
+  padding: 30px 0;
+}
+@media screen and (min-width: 481px) {
+  /* line 31, ../sass/mains/_grid-and-layout.scss */
+  .container {
+    padding: 30px 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* line 31, ../sass/mains/_grid-and-layout.scss */
+  .container {
+    padding: 30px 20px;
+  }
+}
+@media screen and (min-width: 1921px) {
+  /* line 31, ../sass/mains/_grid-and-layout.scss */
+  .container {
+    padding: 30px 40px;
+  }
+}
+
+/* Layout */
+/* line 48, ../sass/mains/_grid-and-layout.scss */
+.widget-container {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px;
+  display: inline-block;
+}
+/* line 61, ../sass/mains/_assets.scss */
+.widget-container.large {
+  width: 100%;
+}
+@media screen and (max-width: 480px) {
+  /* line 65, ../sass/mains/_assets.scss */
+  .widget-container.standard {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* line 65, ../sass/mains/_assets.scss */
+  .widget-container.standard {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 799px) and (max-width: 1023px) {
+  /* line 65, ../sass/mains/_assets.scss */
+  .widget-container.standard {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  /* line 65, ../sass/mains/_assets.scss */
+  .widget-container.standard {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* line 65, ../sass/mains/_assets.scss */
+  .widget-container.standard {
+    width: 20%;
+  }
+}
+
+/* line 52, ../sass/mains/_grid-and-layout.scss */
+.widget {
+  border-left: 2px solid #0d2736;
+  border-top: 2px solid #094b68;
+  border-right: 2px solid #0d2736;
+  border-bottom: 2px solid #0d2736;
+  padding: 5px;
+  background-color: #0f1118;
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 94, ../sass/mains/_assets.scss */
+.widget .content {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 2.24rem;
+}
+/* line 98, ../sass/mains/_assets.scss */
+.widget .content img {
+  max-width: 100%;
+  height: auto;
+}
+/* line 54, ../sass/mains/_grid-and-layout.scss */
+.widget:hover {
+  border-color: #0574a0;
+}

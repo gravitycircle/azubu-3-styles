@@ -1,0 +1,22 @@
+html{
+	min-height: 100%;
+	font-size: 62.5%;
+}
+body{
+	background-image: url($main-asset-directory+'background.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	min-height: 100%;
+	color: #fff;
+	font-family: $bodyfont;
+	font-weight: normal;
+	@include font-size($base-type-size, body);
+}
+
+/* Type */
+.widget{
+	@include header-sizes($base-type-size);
+	@include paragraph-sizes($base-type-size);
+	max-width: 100%;
+}

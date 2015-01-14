@@ -1,0 +1,57 @@
+header{
+	height: $gutter * 10;
+	padding: ($gutter * 3) 0;
+	
+	@media #{$tablet-portrait}{
+		padding: ($gutter * 3) 10px;
+	}
+	
+	@media #{$desktop-standard}{
+		padding: ($gutter * 3) 20px;
+	}
+
+	@media #{$desktop-uhd}{
+		padding: ($gutter * 3) 40px;
+	}
+
+	h1{
+		width: 220px;
+		height: 40px;
+		display: block; 
+		background-image: url($main-logo);
+		background-size: cover;
+		background-position: left center;
+		overflow: hidden;
+		text-indent: -9999px;
+	}
+	
+	@include box-sizing(border-box);
+}
+
+.container{ 
+	padding: ($gutter * 3) 0;
+	
+	@media #{$tablet-portrait}{
+		padding: ($gutter * 3) 10px;
+	}
+	
+	@media #{$desktop-standard}{
+		padding: ($gutter * 3) 20px;
+	}
+
+	@media #{$desktop-uhd}{
+		padding: ($gutter * 3) 40px;
+	}
+}
+
+/* Layout */
+.widget-container{
+	@include widget-containers();
+}
+
+.widget{
+	@include widget-styles();
+	&:hover{
+		@include widget-hover();
+	}
+}
