@@ -12,6 +12,8 @@ $tablet-landscape-specific: "screen and (min-width: 799px) and (max-width: 1023p
 $desktop-small-specific: "screen and (min-width: 1024px) and (max-width: 1199px)";
 $desktop-standard-specific: "screen and (min-width: 1200px) and (max-width: 1920px)";
 
+/*Viewport Sizes*/
+
 /*asset library*/
 $main-asset-directory: "../../assets/";
 $main-logo: "../../assets/logo.png";
@@ -19,6 +21,12 @@ $main-logo: "../../assets/logo.png";
 /*Grids, measurements, etc...*/
 $gutter: 10px;
 $bodyfont: 'Source Sans Pro', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+$line-height-ratio: 1.4;
+$quote-height-ratio: 1.5;
+$heading-height-ratio: 1.3;
+$base-type-size: 16;
+$baseline: (($base-type-size/10) * $line-height-ratio);
 
 /*colors*/
 $blue-widget-background: #0f1118;
@@ -32,11 +40,7 @@ $widget-light-side: #094b68;
 $white: "#ffffff";
 $gray-superlight: "#e6e8ea";
 
-$line-height-ratio: 1.4;
-$quote-height-ratio: 1.5;
-$heading-height-ratio: 1.6;
-$base-type-size: 16;
-$baseline: (($base-type-size/10) * $line-height-ratio);
+
 /* Style Functions */
 @function type-proportions($type)
 {
@@ -56,10 +60,25 @@ $baseline: (($base-type-size/10) * $line-height-ratio);
 @mixin widget-containers(){
 	@include box-sizing(border-box);
 	padding: $gutter * 2;
-	display: inline-block;
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: 400px;
 	
-	&.large{
+	@media #{$mobile}{
 		width: 100%;
+	}
+	@media #{$tablet-portrait-specific}{
+		width: 1600px;
+	}
+	@media #{$tablet-landscape-specific}{
+		width: 1600px;
+	}
+	@media #{$desktop-small-specific}{
+		width: 1600px;
+	}
+	@media #{$desktop-standard}{
+		width: 1600px;
 	}
 	
 	&.standard{
@@ -67,16 +86,34 @@ $baseline: (($base-type-size/10) * $line-height-ratio);
 			width: 100%;
 		}
 		@media #{$tablet-portrait-specific}{
-			width: 100%;
+			width: 800px;
 		}
 		@media #{$tablet-landscape-specific}{
-			width: 50%;
+			width: 800px;
 		}
 		@media #{$desktop-small-specific}{
-			width: 25%;
+			width: 800px;
 		}
 		@media #{$desktop-standard}{
-			width: 20%;
+			width: 800px;
+		}
+	}
+
+	&.small{
+		@media #{$mobile}{
+			width: 100%;
+		}
+		@media #{$tablet-portrait-specific}{
+			width: 400px;
+		}
+		@media #{$tablet-landscape-specific}{
+			width: 400px;
+		}
+		@media #{$desktop-small-specific}{
+			width: 400px;
+		}
+		@media #{$desktop-standard}{
+			width: 400px;
 		}
 	}
 }
@@ -91,13 +128,21 @@ $baseline: (($base-type-size/10) * $line-height-ratio);
 	position: relative;
 	@include box-sizing(border-box);
 	
+	h1{
+		display: block;
+		height: 62px;
+		margin-bottom: 0;
+		@include box-sizing(border-box);
+		padding: 0 $baseline+rem;
+	}
 	.content{
 		@include box-sizing(border-box);
 		padding: $baseline+rem;
+		height: 360-62+px;
+		overflow-y: auto;
 		
 		img{
 			max-width: 100%;
-			height: auto;
 		}
 	}
 }

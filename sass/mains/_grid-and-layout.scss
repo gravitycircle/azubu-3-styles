@@ -1,6 +1,10 @@
 header{
 	height: $gutter * 10;
 	padding: ($gutter * 3) 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 	
 	@media #{$tablet-portrait}{
 		padding: ($gutter * 3) 10px;
@@ -54,4 +58,8 @@ header{
 	&:hover{
 		@include widget-hover();
 	}
+}
+
+.columns{
+	width: 25%;
 }

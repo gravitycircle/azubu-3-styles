@@ -48,6 +48,7 @@ table {
 
 /* Breakpoints */
 /* Specifics */
+/*Viewport Sizes*/
 /*asset library*/
 /*Grids, measurements, etc...*/
 /*colors*/
@@ -61,96 +62,98 @@ html {
 
 /* line 5, ../sass/mains/_azubu-reset.scss */
 body {
-  background-image: url("../../assets/background.jpg");
+  background: url("../../assets/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
   min-height: 100%;
   color: #fff;
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: normal;
+  padding-top: 100px;
   font-size: 1.6rem;
-  line-height: 2.56rem;
+  line-height: 2.08rem;
 }
 
 /* Type */
-/* line 18, ../sass/mains/_azubu-reset.scss */
+/* line 20, ../sass/mains/_azubu-reset.scss */
 .widget {
   max-width: 100%;
 }
-/* line 135, ../sass/mains/_assets.scss */
+/* line 180, ../sass/mains/_assets.scss */
 .widget h1 {
   font-size: 4.8rem;
-  line-height: 7.68rem;
+  line-height: 6.24rem;
   font-weight: 600;
   margin-bottom: 2.24rem;
 }
-/* line 137, ../sass/mains/_assets.scss */
+/* line 182, ../sass/mains/_assets.scss */
 .widget h1.upper-case {
   text-transform: uppercase;
 }
-/* line 141, ../sass/mains/_assets.scss */
+/* line 186, ../sass/mains/_assets.scss */
 .widget h2 {
   font-size: 4rem;
-  line-height: 6.4rem;
+  line-height: 5.2rem;
   font-weight: 600;
   margin-bottom: 2.24rem;
 }
-/* line 143, ../sass/mains/_assets.scss */
+/* line 188, ../sass/mains/_assets.scss */
 .widget h2.upper-case {
   text-transform: uppercase;
 }
-/* line 147, ../sass/mains/_assets.scss */
+/* line 192, ../sass/mains/_assets.scss */
 .widget h3 {
   font-size: 3.2rem;
-  line-height: 5.12rem;
+  line-height: 4.16rem;
   font-weight: 600;
   margin-bottom: 2.24rem;
 }
-/* line 149, ../sass/mains/_assets.scss */
+/* line 194, ../sass/mains/_assets.scss */
 .widget h3.upper-case {
   text-transform: uppercase;
 }
-/* line 153, ../sass/mains/_assets.scss */
+/* line 198, ../sass/mains/_assets.scss */
 .widget h4 {
   font-size: 2.4rem;
-  line-height: 3.84rem;
+  line-height: 3.12rem;
   font-weight: 600;
   margin-bottom: 2.24rem;
 }
-/* line 155, ../sass/mains/_assets.scss */
+/* line 200, ../sass/mains/_assets.scss */
 .widget h4.upper-case {
   text-transform: uppercase;
 }
-/* line 159, ../sass/mains/_assets.scss */
+/* line 204, ../sass/mains/_assets.scss */
 .widget h5 {
   font-size: 2rem;
-  line-height: 3.2rem;
+  line-height: 2.6rem;
   font-weight: 600;
   margin-bottom: 2.24rem;
 }
-/* line 161, ../sass/mains/_assets.scss */
+/* line 206, ../sass/mains/_assets.scss */
 .widget h5.upper-case {
   text-transform: uppercase;
 }
-/* line 165, ../sass/mains/_assets.scss */
+/* line 210, ../sass/mains/_assets.scss */
 .widget h6 {
   font-size: 1.6rem;
-  line-height: 2.56rem;
+  line-height: 2.08rem;
   font-weight: 600;
   margin-bottom: 2.24rem;
 }
-/* line 167, ../sass/mains/_assets.scss */
+/* line 212, ../sass/mains/_assets.scss */
 .widget h6.upper-case {
   text-transform: uppercase;
 }
-/* line 174, ../sass/mains/_assets.scss */
+/* line 219, ../sass/mains/_assets.scss */
 .widget p {
   font-size: 1.6rem;
   line-height: 2.24rem;
   margin-bottom: 2.24rem;
 }
-/* line 178, ../sass/mains/_assets.scss */
+/* line 223, ../sass/mains/_assets.scss */
 .widget blockquote {
   font-size: 1.44rem;
   line-height: 2.16rem;
@@ -158,11 +161,11 @@ body {
   display: block;
   margin-bottom: 2.24rem;
 }
-/* line 120, ../sass/mains/_assets.scss */
+/* line 165, ../sass/mains/_assets.scss */
 .widget blockquote:before {
   content: '"';
 }
-/* line 124, ../sass/mains/_assets.scss */
+/* line 169, ../sass/mains/_assets.scss */
 .widget blockquote:after {
   content: '"';
 }
@@ -171,6 +174,10 @@ body {
 header {
   height: 100px;
   padding: 30px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -193,7 +200,7 @@ header {
     padding: 30px 40px;
   }
 }
-/* line 17, ../sass/mains/_grid-and-layout.scss */
+/* line 21, ../sass/mains/_grid-and-layout.scss */
 header h1 {
   width: 220px;
   height: 40px;
@@ -205,74 +212,133 @@ header h1 {
   text-indent: -9999px;
 }
 
-/* line 31, ../sass/mains/_grid-and-layout.scss */
+/* line 35, ../sass/mains/_grid-and-layout.scss */
 .container {
   padding: 30px 0;
 }
 @media screen and (min-width: 481px) {
-  /* line 31, ../sass/mains/_grid-and-layout.scss */
+  /* line 35, ../sass/mains/_grid-and-layout.scss */
   .container {
     padding: 30px 10px;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 31, ../sass/mains/_grid-and-layout.scss */
+  /* line 35, ../sass/mains/_grid-and-layout.scss */
   .container {
     padding: 30px 20px;
   }
 }
 @media screen and (min-width: 1921px) {
-  /* line 31, ../sass/mains/_grid-and-layout.scss */
+  /* line 35, ../sass/mains/_grid-and-layout.scss */
   .container {
     padding: 30px 40px;
   }
 }
 
 /* Layout */
-/* line 48, ../sass/mains/_grid-and-layout.scss */
+/* line 52, ../sass/mains/_grid-and-layout.scss */
 .widget-container {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 20px;
-  display: inline-block;
-}
-/* line 61, ../sass/mains/_assets.scss */
-.widget-container.large {
+  display: block;
   width: 100%;
+  max-width: 100%;
+  height: 400px;
 }
 @media screen and (max-width: 480px) {
-  /* line 65, ../sass/mains/_assets.scss */
+  /* line 52, ../sass/mains/_grid-and-layout.scss */
+  .widget-container {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* line 52, ../sass/mains/_grid-and-layout.scss */
+  .widget-container {
+    width: 1600px;
+  }
+}
+@media screen and (min-width: 799px) and (max-width: 1023px) {
+  /* line 52, ../sass/mains/_grid-and-layout.scss */
+  .widget-container {
+    width: 1600px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  /* line 52, ../sass/mains/_grid-and-layout.scss */
+  .widget-container {
+    width: 1600px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* line 52, ../sass/mains/_grid-and-layout.scss */
+  .widget-container {
+    width: 1600px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 84, ../sass/mains/_assets.scss */
   .widget-container.standard {
     width: 100%;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  /* line 65, ../sass/mains/_assets.scss */
+  /* line 84, ../sass/mains/_assets.scss */
   .widget-container.standard {
-    width: 100%;
+    width: 800px;
   }
 }
 @media screen and (min-width: 799px) and (max-width: 1023px) {
-  /* line 65, ../sass/mains/_assets.scss */
+  /* line 84, ../sass/mains/_assets.scss */
   .widget-container.standard {
-    width: 50%;
+    width: 800px;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
-  /* line 65, ../sass/mains/_assets.scss */
+  /* line 84, ../sass/mains/_assets.scss */
   .widget-container.standard {
-    width: 25%;
+    width: 800px;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 65, ../sass/mains/_assets.scss */
+  /* line 84, ../sass/mains/_assets.scss */
   .widget-container.standard {
-    width: 20%;
+    width: 800px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 102, ../sass/mains/_assets.scss */
+  .widget-container.small {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* line 102, ../sass/mains/_assets.scss */
+  .widget-container.small {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 799px) and (max-width: 1023px) {
+  /* line 102, ../sass/mains/_assets.scss */
+  .widget-container.small {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  /* line 102, ../sass/mains/_assets.scss */
+  .widget-container.small {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* line 102, ../sass/mains/_assets.scss */
+  .widget-container.small {
+    width: 400px;
   }
 }
 
-/* line 52, ../sass/mains/_grid-and-layout.scss */
+/* line 56, ../sass/mains/_grid-and-layout.scss */
 .widget {
   border-left: 2px solid #0d2736;
   border-top: 2px solid #094b68;
@@ -285,19 +351,35 @@ header h1 {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 94, ../sass/mains/_assets.scss */
+/* line 131, ../sass/mains/_assets.scss */
+.widget h1 {
+  display: block;
+  height: 62px;
+  margin-bottom: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 2.24rem;
+}
+/* line 138, ../sass/mains/_assets.scss */
 .widget .content {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 2.24rem;
+  height: 298px;
+  overflow-y: auto;
 }
-/* line 98, ../sass/mains/_assets.scss */
+/* line 144, ../sass/mains/_assets.scss */
 .widget .content img {
   max-width: 100%;
-  height: auto;
 }
-/* line 54, ../sass/mains/_grid-and-layout.scss */
+/* line 58, ../sass/mains/_grid-and-layout.scss */
 .widget:hover {
   border-color: #0574a0;
+}
+
+/* line 63, ../sass/mains/_grid-and-layout.scss */
+.columns {
+  width: 25%;
 }

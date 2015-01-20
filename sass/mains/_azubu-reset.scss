@@ -3,14 +3,16 @@ html{
 	font-size: 62.5%;
 }
 body{
-	background-image: url($main-asset-directory+'background.jpg');
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
+	background: url($main-asset-directory+'background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 	min-height: 100%;
 	color: #fff;
 	font-family: $bodyfont;
 	font-weight: normal;
+	padding-top: $gutter*10;
 	@include font-size($base-type-size, body);
 }
 

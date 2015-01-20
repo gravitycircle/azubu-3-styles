@@ -1,41 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="azubu">
 <head>
 	<meta charset="UTF-8">
 	<title>Azubu 3.0 Boilerplate Template</title>
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" media="screen" type="text/css" href="/stylesheets/style.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/packery.pkgd.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/widgets.js"></script>
 </head>
 <body>
 	<header>
 		<h1>Azubu</h1>
 	</header>
-	<section class="main container">
-		<div class="large-content-widget widget-container large">
-			<div class="widget">
-				<div class="content">
-					<h1 class="upper-case">Widget 1</h1>
-					<h2>Widget 2</h2>
-					<h3>Widget 3</h3>
-					<h4>Widget 4</h4>
-					<h5>Widget 5</h5>
-					<h6>Widget 6</h6>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea possimus animi, necessitatibus sed optio saepe doloribus sequi facere nobis nemo eligendi hic nulla rerum nihil exercitationem, natus eveniet modi deserunt.
-					</p>
-					<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quisquam nihil cumque mollitia, dolorum aperiam quod incidunt quibusdam, quasi ipsam ratione, natus labore illum odio omnis. Illum architecto deserunt quas?</blockquote>
-					<img src="http://placekitten.com/1280/800" alt="Placing Kitten Here">
-				</div>
-			</div>
-		</div>
-		<div class="large-content-widget widget-container standard">
-			<div class="widget">
-				<div class="content">
-					<h1 class="upper-case">Widget 1</h1>
-					<img src="http://placekitten.com/1280/800" alt="Placing Kitten Here">
-				</div>
-			</div>
-		</div>
+	<section class="main container" build-packery>
+		<brick class="widget-container large" type="video"></brick>
+		<brick class="widget-container small" type="content"></brick>
+		<brick class="widget-container small" type="content"></brick>
+		<brick class="widget-container small" type="gadget"></brick>
+		<brick class="widget-container standard" type="content"></brick>
+		<brick class="widget-container large" type="content"></brick>
 	</section>
 </body>
 </html>

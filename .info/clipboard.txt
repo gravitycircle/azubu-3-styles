@@ -1,0 +1,6 @@
+<brick type="video" size="large"></brick>
+			<brick type="content" size="standard"></brick>
+			<brick type="content" size="standard"></brick>
+			<brick type="gadget" size="small"></brick>
+			<brick type="content" size="large"></brick>
+			<brick type="content" size="standard"></brick>
