@@ -1,8 +1,13 @@
-<section class="widget">
-	<h1 class="upper-case">Widget 3</h1>
+<section class="gear-widget widget">
 	<div class="content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam facilis a tempora esse ipsam, enim sit. Sunt nulla, doloremque voluptates id consequatur fuga excepturi, suscipit iusto debitis vitae provident consequuntur.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam facilis a tempora esse ipsam, enim sit. Sunt nulla, doloremque voluptates id consequatur fuga excepturi, suscipit iusto debitis vitae provident consequuntur.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam facilis a tempora esse ipsam, enim sit. Sunt nulla, doloremque voluptates id consequatur fuga excepturi, suscipit iusto debitis vitae provident consequuntur.</p>
+		<div class="gear-container" ng-repeat="x in gear">
+			<div class="gear-image" ng-style="{'background-image': 'url({{x.img}})'}"></div>
+			<div class="gear-text">
+				<div class="small-text">{{x.category}}</div>
+				<h2>{{x.item}}</h2>
+				<a ng-href="{{x.url}}" target="_blank">by {{x.company}}</a>
+			</div>
+		</div>
 	</div>
+	<h1 class="title-bar">Gear</h1>
 </section>

@@ -1,0 +1,23 @@
+[
+{
+"item" : "M.O.U.S.9",
+"company" : "Mad Catz",
+"url" : "http://store.madcatz.com/brands/mad-catz/Mad-Catz-MOUS-9.html",
+"category" : "INPUT",
+"img" : "http://authsci.com/azubu/gfl/3/gear/mouse.png"
+},
+{
+"item" : "Onda Pro",
+"company" : "Ozone Gaming",
+"url" : "http://ozonegaming.com/category/headsets/",
+"category" : "AUDIO",
+"img" : "http://authsci.com/azubu/gfl/3/gear/headphones.png"
+},
+{
+"item" : "Anansi",
+"company" : "Razer",
+"url" : "http://www.razerzone.com/ca-en/gaming-keyboards-keypads/razer-anansi",
+"category" : "INPUT",
+"img" : "http://authsci.com/azubu/gfl/3/gear/keyboard.jpg"
+}
+]

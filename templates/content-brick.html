@@ -1,6 +1,13 @@
-<section class="widget">
-	<h1 class="upper-case">Widget 2</h1>
+<section class="content-widget widget">
 	<div class="content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam facilis a tempora esse ipsam, enim sit. Sunt nulla, doloremque voluptates id consequatur fuga excepturi, suscipit iusto debitis vitae provident consequuntur.</p>
+		<section class="content-container" ng-repeat="x in blog_details">
+			<a ng-href="{{x.url}}" class="content-image" ng-style="{'background-image': 'url({{x.image}})'}" target="_blank"><span class="category">{{x.category}}</span></a>
+			<div class="content-text">
+				<h2><a ng-href="{{x.url}}" target="_blank">{{x.title}}</a></h2>
+				<div class="small-text">{{x.author}} &bull; {{x.date+'000' | date:'MMMM dd, yyyy'}}</div>
+				<article class="excerpt">{{x.excerpt}}</article>
+			</div>
+		</section>
 	</div>
+	<h1 class="title-bar">News & Events</h1>
 </section>

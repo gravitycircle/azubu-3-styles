@@ -1,0 +1,136 @@
+.content-widget, .video-widget, .gear-widget{
+	height: 360px;
+	
+	.content{
+		height: 360px;
+	}
+	h1.title-bar{
+		font-size: 1.6rem;
+		line-height: 3rem;
+		height: 3rem;
+		margin: 0;
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		text-transform: uppercase;
+		border-top: 1px solid $gray-standard;
+	}
+}
+
+.content-widget, .gear-widget{
+	.content{
+		height: 330px;
+		overflow-y: auto;
+	}
+	
+	.gear-container{
+		height: 96px;
+		width: 100%;
+		@include box-sizing(content-box);
+		padding: $gutter*2 0;
+		overflow: hidden;
+	}
+	.gear-image{
+		width: 96px;
+		height: 96px;
+		@include background-size(cover);
+		background-position: center center;
+		background-repeat: no-repeat; 
+		float: left;
+		margin-right: 10px;
+	}
+	
+	.gear-text{
+		h2{
+			font-size: ($base-type-size+9)/10 + rem;
+			line-height: ($base-type-size+11)/10 + rem;
+			margin-bottom: 0;
+		}
+		a{
+			color: $blue-accent;
+			text-decoration: none;
+			font-size: ($base-type-size+2)/10 + rem;
+			font-weight: 600;
+			@include transition (all, 0.3s, ease-out);
+			
+			&:hover{
+				color: $blue-accent-highlight;
+			}
+		}
+		.small-text{
+			color: $gray-standard;
+			font-size: $base-type-size * 16/200 + rem;
+			text-transform: uppercase;
+		}
+	}
+	
+	.content-container{
+		height: 120px;
+		width: 100%;
+		@include box-sizing(content-box);
+		padding: $gutter*2 0;
+		overflow: hidden;
+		
+		.content-image{
+			width: 118px;
+			height: 118px;
+			@include background-size(cover);
+			background-position: center center;
+			background-repeat: no-repeat; 
+			float: left;
+			display: block;
+			margin-right: 10px;
+			text-decoration: none;
+			border: 1px solid $widget-dark-side;
+			@include transition (all, 0.3s, ease-out);
+			position: relative;
+			overflow: hidden;
+			&:hover{ border: 1px solid $widget-light-side; }
+			
+			.category{
+				display: block;
+				color: #fff;
+				background: $blue-accent-highlight;
+				text-transform: uppercase;
+				font-size: ($base-type-size - 5)/10 + rem;
+				line-height: ($base-type-size - 4)/10 + rem;
+				padding: 0 2px;
+				position: absolute;
+				left: 0;
+				bottom: 10px;
+			}
+		}
+		
+		.content-text{
+			h2{
+				font-size: ($base-type-size + 4)/10 + rem;
+				line-height: ($base-type-size + 6) / 10 + rem;
+				margin: 0;
+				a{
+					color: $blue-accent;
+					font-weight: 600;
+					text-decoration: none;
+					@include transition (all, 0.3s, ease-out);
+				}
+				
+				& a:hover{
+					color: $blue-accent-highlight;
+				}
+			}
+			.small-text{
+				color: $gray-standard;
+			font-size: $base-type-size * 16/200 + rem;
+			text-transform: uppercase;
+			}
+			
+			.excerpt{
+				color: $gray-superlight;
+				font-size: $base-type-size * 20/200 + rem;
+				text-transform: none;
+			}
+		}
+	}
+}

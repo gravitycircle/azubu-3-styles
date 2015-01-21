@@ -33,12 +33,14 @@ $blue-widget-background: #0f1118;
 $blue-body-background: #151922;
 $blue-dark-accent: #0d202c;
 $blue-accent: #0574a0;
+$blue-accent-highlight: #329dc8;
 
 $widget-dark-side: #0d2736;
 $widget-light-side: #094b68;
 
 $white: "#ffffff";
-$gray-superlight: "#e6e8ea";
+$gray-superlight: #e6e8ea;
+$gray-standard: #555;
 
 
 /* Style Functions */
@@ -126,7 +128,7 @@ $gray-superlight: "#e6e8ea";
 	padding: 5px;
 	background-color: $blue-widget-background;
 	position: relative;
-	@include box-sizing(border-box);
+	//@include box-sizing(border-box);
 	
 	h1{
 		display: block;

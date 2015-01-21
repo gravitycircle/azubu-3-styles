@@ -33,19 +33,7 @@ header{
 }
 
 .container{ 
-	padding: ($gutter * 3) 0;
 	
-	@media #{$tablet-portrait}{
-		padding: ($gutter * 3) 10px;
-	}
-	
-	@media #{$desktop-standard}{
-		padding: ($gutter * 3) 20px;
-	}
-
-	@media #{$desktop-uhd}{
-		padding: ($gutter * 3) 40px;
-	}
 }
 
 /* Layout */
@@ -58,8 +46,4 @@ header{
 	&:hover{
 		@include widget-hover();
 	}
-}
-
-.columns{
-	width: 25%;
 }

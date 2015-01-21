@@ -1,0 +1,20 @@
+[
+	{
+		'live' : 'yes',
+		'title' : 'Faker vs MegumiXBear',
+		'start' : '1421771521',
+		'end' : : '1421775121'
+	},
+	{
+		'live' : 'rebroadcast',
+		'title' : 'SKT Faker',
+		'start' : '1421685121',
+		'end' : '1421688721'
+	},
+	{
+		'live' : 'coming soon',
+		'title' : 'Faker dominating at WCS',
+		'start' : '1421857921',
+		'end' : '1421861521'
+	}
+]

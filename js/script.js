@@ -1,7 +1,7 @@
 (function(){
 	var azubu = angular.module('azubu', ['bricks']);
 	
-	azubu.directive('brick', function($compile){
+	azubu.directive('brick', ['$compile', function($compile){
 		return {
 			trasclude: 'element',
 			restrict: 'E',
@@ -23,7 +23,7 @@
 
 			}
 		};
-	});
+	}]);
 	
 	
 	azubu.directive('buildPackery', ['$rootScope', function($rootScope) {
@@ -39,7 +39,7 @@
 					});
 					$rootScope.packery.bindResize();
 					$rootScope.packery.appended(element[0]);
-					
+					$rootScope.packery.items.splice(1,1);
 				}
 				else{
 					$rootScope.packery.appended(element[0]);
